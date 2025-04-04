@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "sem-proj"
+version = "0.0.1"
+description = "optimizing sales conversions on social media ads and predicting future sales by utilizing conversion data to predict future conversions"
+authors = [
+  { name = "Osmund Fosu Rockson" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.1.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["sem-proj"]
+include = ["pyproject.toml", "sem-proj/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["sem-proj"]
+force-sort-within-sections = true
+
